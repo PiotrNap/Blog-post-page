@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animation {
+  animation: bounce 0.5s ease-in infinity;
+}
+
+.animation:nth-last-of-type(2) {
+  animation-delay: 0.1;
+}
+
+.animation:nth-last-of-type(3) {
+  animation-delay: 0.2;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}

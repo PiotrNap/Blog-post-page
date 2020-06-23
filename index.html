@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog infinity scroll</title>
+    <link href="styles/output.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://pagecdn.io/lib/font-awesome/5.10.0-11/css/all.min.css"
+      integrity="sha256-p9TTWD+813MlLaxMXMbTA7wN/ArzGyW/L7c5+KkjOkM=" crossorigin="anonymous" />
+  </head>
+  <body
+    class="static w-3/4 m-auto py-16 flex justify-center flex-col"
+    style="font-family: Lato, sans-serif;"
+  >
+    <header class="font-body w-full flex jusitfy-content-center flex-col">
+      <h1 class="text-3xl text-gray-800 text-center mb-6 font-normal">
+        Hello from Blog Page
+      </h1>
+      <form class="w-full max-w-2xl m-auto" id="form">
+        <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+          <input
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="text"
+            placeholder="Look up for a post..."
+            aria-label="Full name"
+            id="input"
+          />
+          <input
+            class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-8 rounded"
+            type="button"
+            id="search"
+            value="Search"
+          >      
+          </input>
+        </div>
+      </form>
+    </header>
+    <main class="flex m-auto mt-5 flex-col" id="list">
+    </main>
+    <div
+      class="flex fixed bottom-0 mb-6 ease-in"
+      style="opacity: 0; left: 50%;"
+      id="loader"
+    >
+      <span class="text-teal-500 opacity-75 top-1/2 my-0 mx-auto block fixed w-0 h-0" style="
+          transform: translateY(-25px);
+      ">
+        <i class="fas fa-circle-notch fa-spin fa-2x"></i>
+      </span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
